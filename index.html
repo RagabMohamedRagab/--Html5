@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='description' content='UI'>
+    <meta name='keyword' content='Html5/Css3'>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,800;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="index.css">
+    <title>Contact</title>
+</head>
+
+<body>
+    <section class='Content'>
+        <div class="left_side">
+            <div class='logo'><img src="./image/Logo.svg" alt="Photo"></div>
+            <div class="description">
+                <h1>add plants to your living space</h1>
+                <p>plants are an inexpensive means to accessorizing your space and adding color and texture</p>
+                <button>learn more</button>
+            </div>
+        </div>
+        <div class="right_side">
+            <div class="header_side">
+                <img src="./image/photo1.PNG" alt="" id='Slider'>
+            </div>
+            <div class="body_side">
+                <h1>where can i find ideas for small rooms</h1>
+                <hr>
+                <p>just like most everyone else these days — are ready to get out there and travel. many have been
+                    calling the Travel Office to start planning their next trips. From quiet beach resorts to adventure
+                    vacations out West.</p>
+                <div class="move">
+                    <i class="fal fa-angle-left" id='Back'></i>
+                    <div class='vertical'></div>
+                    <i class="fal fa-angle-right" id='Next'></i>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <script>
+        let Slider = document.getElementById('Slider'),
+            Back = document.getElementById('Back'),
+            Next = document.getElementById('Next');
+        let ArrayImage = new Array(
+            './image/photo1.PNG',
+            './image/photo2.PNG',
+            './image/photo3.PNG',
+            './image/photo4.PNG',
+        );
+        var i = 0;
+        Next.onclick = function () {
+            if (i <= 3) {
+                Slider.src = ArrayImage[i];
+                i++;
+            }
+        }
+        Back.onclick = function () {
+            if (i > 0) {
+                Slider.src = ArrayImage[i - 1];
+                i--
+            }
+        }
+    </script>
+</body>
+
+</html>
